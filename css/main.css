@@ -74,6 +74,50 @@ header h2 {
   position: relative;
 }
 
+.feedback-header {
+  margin: 2rem  0rem;
+  color: #fff;
+ 
+} 
+
+.feedback-header h3 {
+  text-align: left;
+  text-decoration:none;
+  line-height: 1.8 !important;
+  letter-spacing: 0.1rem;
+}
+
+.feedback-footer {
+ margin: 2rem  0rem;
+}
+
+.feedback-footer p {
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+
+.fdb-btn {
+   background-color: firebrick;
+   border: none;
+   color: white;
+   display: inline-flex;
+   font-family: inherit;
+   font-size: 1.1rem;
+   cursor: pointer;
+   padding: 12px 16px;
+   transition: all 0.5s;
+
+}
+
+.fdb-btn:hover {
+ background-color: RoyalBlue !important;
+}
+
+.fdb-span {
+ margin: 1rem;
+}
+
+
 .business {
   margin-bottom: 3rem;
   padding: 7rem 3rem;
@@ -94,6 +138,50 @@ header h2 {
   font-weight: 100;
   text-transform: uppercase;
  line-height: 1.8;
+}
+
+.contact {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  align-items: flex-start;
+  padding: 1rem;
+  justify-content: center;
+  width: 90%;
+}
+
+#my-form-status {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  align-items: flex-start;
+  padding: 3rem;
+  margin: 1rem;
+  width: 100%;
+}
+.contact input, textarea{
+  background-color: #ddd;
+  border: 1px solid #eee;
+  border-radius: 1px;
+  padding: 0.5rem;
+  font-family: inherit;
+  margin: 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.contact button {
+  background-color: firebrick;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-family: inherit;
+  width: 100%;
+}
+.contact  button:hover {
+  background-color: RoyalBlue !important;
 }
 
 #linked {
@@ -120,6 +208,17 @@ transition: width 2s, height 4s;
   to   { opacity: 1}
 }
 
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  width: 50%;
+  align-items: left;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #fff;
+}
+
 .left-article {
   display: flex;
   flex-wrap: wrap;
@@ -140,6 +239,18 @@ transition: width 2s, height 4s;
     padding: 1rem;
     color: #fff;
   }
+
+  .feedback-article {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    width: 50%;
+    align-items: left;
+    justify-content: space-between;
+    padding: 1rem;
+    color: #fff;
+  }
+  
   
 
   article img {
@@ -147,6 +258,14 @@ transition: width 2s, height 4s;
     height: 100%;
     width: 100%;
     border-radius: 1px;
+  }
+
+  #profile {
+    border-radius:3px;
+    opacity: 0.8;
+     display: flex;
+     align-items: center;
+  
   }
 
 .article {
@@ -246,7 +365,7 @@ margin-top: 1rem;
 .menu-wrap .toggler {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 2;
   cursor: pointer;
   width: 60px;
@@ -257,12 +376,12 @@ margin-top: 1rem;
 .menu-wrap .hamburger {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
   width: 60px;
   height: 60px;
   padding: 1rem;
-  background: var(--primarolor);
+  background: var(--primarycolor);
   opacity: 0.3;
   display: flex;
   align-items: center;
@@ -362,7 +481,7 @@ margin-top: 1rem;
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 0.7rem;
 }
 
@@ -403,8 +522,28 @@ header h1 {
 
 }
 
+.feedback-form {
+  display: block;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: left;
+  
+}
+.feedback-article {
+  display: block;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: left;
+  
+}
 
-
+.contact input, textarea{
+  display: block;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: left; 
+  
+}
   .left-article {
     display: block;
     flex-wrap: wrap;
@@ -473,8 +612,20 @@ header h1 {
 
 }
 
-
-
+.feedback-article{
+  display: block;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: left; 
+  
+}
+.feedback-form {
+  display: block;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: left; 
+  
+}
   .left-article {
     display: block;
     flex-wrap: wrap;
@@ -510,4 +661,5 @@ header h2 {
   padding-bottom: 1.5rem;
 
 }
+
 }
