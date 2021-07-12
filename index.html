@@ -23,10 +23,10 @@
               <li><a href="#">Projects</a></li>
             </ul>
             <ul>
-              <li><a href="#">About</a></li>
+              <li><a href="#">Skills</a></li>
             </ul>
             <ul>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#Contact">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -123,5 +123,70 @@
   </article>
 </div>
 </section>
+ <!--<div class="title-heading" id="Projects"><h1 class= "text-center">Projects</h1></div>
+ <section class="flex-container" id="flex-container"> 
+ </section>
+ <div class="title-heading" id="About"><h1 class= "text-center">Skills</h1></div>
+ <section class="flex-container" id="flex-container"> 
+    <article>   
+    </article>
+  </div>
+ </section>-->
+ <div class="title-heading" id="Contact"><h1 class= "text-center">Contact</h1></div>
+ <section class="flex-container" id="flex-container"> 
+   <div class="feedback-form">
+  <form class="contact" id="my-form" action="https://formspree.io/f/mjvjekov" method="POST">
+    <input type="text" name="name" placeholder="Name" required/>
+    <input type="email" name="email" placeholder="Email" required/>
+    <textarea name="message" rows="4" cols="50" placeholder="Your message..." required></textarea>
+    <button id="my-form-button">Send</button>
+    <p id="my-form-status"></p>
+  </form>
+</div>
+  <div class="feedback-article">
+    <article>
+    <div class="feedback-header">
+      <h3> Get in touch </h3>
+    </div>
+    <div class="feedback-body"><p>Thank you for getting in touch with me, i would love to hear from you, 
+      whether its a question or just want to say hello. I will try my best to get back to you!. Feel free 
+    to contact me about any relevant job updates. </p>
+    </div>
+    <div class="feedback-footer">
+    <span>
+    <a href="https://github.com/vonrashey" target="_blank" id="linked" >
+      <button class="fdb-btn"><i class="fa fa-github"></i></button> </a></span>
+    <span>
+    <a href="https://twitter.com/vonrashey/" target="_blank" id="linked">
+      <button class="fdb-btn"><i class="fa fa-twitter"></i></button></a> </span>
+      <span>
+        <a href="https://www.linkedin.com/in/yeukaimarashe/" target="_blank" id="linked">
+          <button class="fdb-btn"><i class="fa fa-linkedin"></i></button></a> </span>
+    </div>
+  </article>
+</div>
+ </section>
+ <script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      status.innerHTML = "Thanks for your message!";
+      form.reset()
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
   </body>
 </html>
